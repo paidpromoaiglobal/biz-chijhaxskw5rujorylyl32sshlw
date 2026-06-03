@@ -162,6 +162,9 @@ footer{background:#020617;color:#334155;padding:28px 5vw;text-align:center;font-
 .qr-note{color:#94a3b8;font-size:.76rem;font-style:italic;margin-top:8px}
 .qr-btn{display:inline-flex;align-items:center;gap:7px;background:#4285F4;color:#fff;padding:12px 26px;border-radius:10px;text-decoration:none;font-size:.87rem;font-weight:600;transition:opacity .2s;margin-top:4px}
 .qr-btn:hover{opacity:.88}
+@keyframes spin{to{transform:rotate(360deg)}}
+.rv-loading{display:flex;align-items:center;justify-content:center;min-height:200px;color:rgba(255,255,255,.3);font-size:.88rem;gap:10px}
+.rv-loading svg{animation:spin 1s linear infinite;opacity:.5}
 </style>
 </head>
 <body>
@@ -238,97 +241,24 @@ footer{background:#020617;color:#334155;padding:28px 5vw;text-align:center;font-
       <h2 class="sec-h2" style="color:#fff">What Our Students Say</h2>
     </div>
     <div class="rv-board-inner">
-      <div class="rv-panel" data-r>
+      <div class="rv-panel" id="rv-panel" data-r>
         <div class="rv-glogo">
           <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
           Google Reviews
         </div>
-        <div class="rv-big-num">4.9</div>
-        <div class="rv-big-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <div class="rv-total">Based on Google Reviews</div>
-        <div class="rv-bar-row">
-            <span class="rv-bar-lbl">5</span>
-            <div class="rv-bar-track"><div class="rv-bar-fill" style="width:80%"></div></div>
-            <span class="rv-bar-pct">80%</span>
-          </div><div class="rv-bar-row">
-            <span class="rv-bar-lbl">4</span>
-            <div class="rv-bar-track"><div class="rv-bar-fill" style="width:20%"></div></div>
-            <span class="rv-bar-pct">20%</span>
-          </div><div class="rv-bar-row">
-            <span class="rv-bar-lbl">3</span>
-            <div class="rv-bar-track"><div class="rv-bar-fill" style="width:0%"></div></div>
-            <span class="rv-bar-pct">0%</span>
-          </div><div class="rv-bar-row">
-            <span class="rv-bar-lbl">2</span>
-            <div class="rv-bar-track"><div class="rv-bar-fill" style="width:0%"></div></div>
-            <span class="rv-bar-pct">0%</span>
-          </div><div class="rv-bar-row">
-            <span class="rv-bar-lbl">1</span>
-            <div class="rv-bar-track"><div class="rv-bar-fill" style="width:0%"></div></div>
-            <span class="rv-bar-pct">0%</span>
-          </div>
+        <div class="rv-big-num" id="rv-rating">4.9</div>
+        <div class="rv-big-stars" id="rv-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="rv-total" id="rv-total">Based on Google Reviews</div>
         <a href="https://maps.google.com/?cid=13554869940423212128" target="_blank" rel="noopener" class="rv-write-btn">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
           Write a Review
         </a>
       </div>
-      <div class="rv-cards">
-        
-      <div class="rv-card2" data-r>
-        <div class="rv-c-head">
-          <div class="rv-c-av" style="background:#E94560">A</div>
-          <div>
-            <div class="rv-c-name">Aravindhan</div>
-            <div class="rv-c-date">Google Review</div>
-          </div>
+      <div class="rv-cards" id="rv-cards">
+        <div class="rv-loading">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+          Loading reviews…
         </div>
-        <div class="rv-c-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="rv-c-text">&ldquo;Very good place for learning Musical Instruments and Vocals. I would strongly recommend O2 Music Studio to anyone who wants to learn Music. We will be taught from basics and our basics will be very strong.&rdquo;</p>
-      </div>
-      <div class="rv-card2" data-r>
-        <div class="rv-c-head">
-          <div class="rv-c-av" style="background:#1A73E8">R</div>
-          <div>
-            <div class="rv-c-name">Raja K Advocate</div>
-            <div class="rv-c-date">Google Review</div>
-          </div>
-        </div>
-        <div class="rv-c-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
-        <p class="rv-c-text">&ldquo;Genuine teachers — the right place for those who seriously want to learn music.&rdquo;</p>
-      </div>
-      <div class="rv-card2" data-r>
-        <div class="rv-c-head">
-          <div class="rv-c-av" style="background:#34A853">S</div>
-          <div>
-            <div class="rv-c-name">Sridhar R</div>
-            <div class="rv-c-date">Google Review</div>
-          </div>
-        </div>
-        <div class="rv-c-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="rv-c-text">&ldquo;Good and excellent teaching at nominal rate.&rdquo;</p>
-      </div>
-      <div class="rv-card2" data-r>
-        <div class="rv-c-head">
-          <div class="rv-c-av" style="background:#FBBC05">S</div>
-          <div>
-            <div class="rv-c-name">Sathish Sathi K</div>
-            <div class="rv-c-date">Google Review</div>
-          </div>
-        </div>
-        <div class="rv-c-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="rv-c-text">&ldquo;One of the best places to learn music, especially violin and flute.&rdquo;</p>
-      </div>
-      <div class="rv-card2" data-r>
-        <div class="rv-c-head">
-          <div class="rv-c-av" style="background:#9c27b0">P</div>
-          <div>
-            <div class="rv-c-name">Pooja Pooja</div>
-            <div class="rv-c-date">Google Review</div>
-          </div>
-        </div>
-        <div class="rv-c-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="rv-c-text">&ldquo;Very good teaching.&rdquo;</p>
-      </div>
       </div>
     </div>
   </div>
@@ -454,5 +384,44 @@ if(window.innerWidth>768){
     if(ps){var r=ps.closest('.ps-wrap').getBoundingClientRect();ps.style.transform='translateY('+r.top*.2+'px)';}
   },{passive:true});
 }
+// ── Dynamic Google Reviews ────────────────────────────────────────────────────
+(function(){
+  var COLORS=['#E94560','#1A73E8','#34A853','#FBBC05','#9c27b0','#FF6D00','#00BCD4'];
+  function col(n){return COLORS[(n||'A').charCodeAt(0)%COLORS.length];}
+  function stars(n){var f=Math.round(n);return'&#9733;'.repeat(f)+'&#9734;'.repeat(5-f);}
+  function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+  fetch('/api/reviews')
+    .then(function(r){if(!r.ok)throw new Error(r.status);return r.json();})
+    .then(function(d){
+      var rEl=document.getElementById('rv-rating');
+      var sEl=document.getElementById('rv-stars');
+      var tEl=document.getElementById('rv-total');
+      if(rEl)rEl.textContent=Number(d.rating).toFixed(1);
+      if(sEl)sEl.innerHTML=stars(d.rating);
+      if(tEl)tEl.textContent='Based on '+Number(d.total).toLocaleString()+' Google reviews';
+      var c=document.getElementById('rv-cards');
+      if(!c||!d.reviews||!d.reviews.length)return;
+      c.innerHTML=d.reviews.map(function(r){
+        var init=(r.author||'?')[0].toUpperCase();
+        return '<div class="rv-card2 r-in">'+
+          '<div class="rv-c-head">'+
+            '<div class="rv-c-av" style="background:'+col(r.author)+'">'+init+'</div>'+
+            '<div>'+
+              '<div class="rv-c-name">'+esc(r.author)+'</div>'+
+              '<div class="rv-c-date">'+esc(r.time)+'</div>'+
+            '</div>'+
+          '</div>'+
+          '<div class="rv-c-stars">'+stars(r.rating)+'</div>'+
+          (r.text?'<p class="rv-c-text">&ldquo;'+esc(r.text)+'&rdquo;</p>':'')+
+        '</div>';
+      }).join('');
+    })
+    .catch(function(){
+      var c=document.getElementById('rv-cards');
+      if(c)c.innerHTML='<p style="color:rgba(255,255,255,.4);padding:24px;font-size:.88rem;text-align:center">'+
+        'Unable to load reviews. <a href="https://maps.google.com/?cid=13554869940423212128" '+
+        'target="_blank" style="color:#4285F4">View on Google Maps ↗</a></p>';
+    });
+})();
 </script>
 </body></html>
