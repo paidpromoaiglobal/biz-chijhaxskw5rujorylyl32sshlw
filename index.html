@@ -108,32 +108,60 @@ section{padding:72px 5vw}
 footer{background:#020617;color:#334155;padding:28px 5vw;text-align:center;font-size:.8rem}
 .footer-brand{color:#64748b;font-weight:700;font-size:.88rem;margin-bottom:6px}
 
-/* GOOGLE REVIEWS BOARD */
-.rv-summary-box{display:flex;flex-direction:column;align-items:center;gap:8px;padding:32px;background:rgba(255,255,255,.07);border-radius:20px;margin:0 auto 44px;border:1px solid rgba(255,255,255,.12);max-width:300px}
-.rv-score-big{font-size:4.5rem;font-weight:800;color:#fff;line-height:1;letter-spacing:-.04em}
-.rv-stars-lg{color:#fbbf24;font-size:1.8rem;letter-spacing:3px;margin:4px 0}
-.rv-g-badge{display:flex;align-items:center;gap:6px;color:rgba(255,255,255,.42);font-size:.76rem}
-.rv-write-btn{display:inline-block;background:#4285F4;color:#fff;padding:11px 26px;border-radius:8px;font-size:.86rem;font-weight:600;text-decoration:none;margin-top:8px;transition:opacity .2s}
-.rv-write-btn:hover{opacity:.85}
-.rv-card-head{display:flex;align-items:center;gap:12px;margin-bottom:10px}
-.rv-card-av{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1rem;color:#fff;flex-shrink:0}
-.rv-card-name{font-weight:600;font-size:.9rem;color:rgba(255,255,255,.9)}
-.rv-card-sub{font-size:.74rem;color:rgba(255,255,255,.33);margin-top:1px}
-/* GOOGLE MAP */
-.map-wrap{margin-bottom:32px;border-radius:16px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.1)}
-.map-wrap iframe{display:block;width:100%;height:360px;border:0}
-/* QR SECTION */
-.qr-section{background:#f8fafc;padding:72px 5vw}
+
+/* ── GOOGLE REVIEW BOARD ── */
+.rv-board{background:#0f172a}
+.rv-board-inner{display:grid;grid-template-columns:1fr;gap:40px;align-items:start}
+@media(min-width:768px){.rv-board-inner{grid-template-columns:260px 1fr}}
+.rv-panel{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:28px;position:sticky;top:80px}
+.rv-glogo{display:flex;align-items:center;gap:8px;margin-bottom:18px;font-size:.85rem;font-weight:600;color:rgba(255,255,255,.7)}
+.rv-big-num{font-size:3.8rem;font-weight:800;color:#fff;line-height:1;letter-spacing:-.04em}
+.rv-big-stars{color:#fbbf24;font-size:1.4rem;letter-spacing:2px;margin:6px 0 4px}
+.rv-total{font-size:.78rem;color:rgba(255,255,255,.42);margin-bottom:20px}
+.rv-bar-row{display:flex;align-items:center;gap:8px;margin-bottom:7px;font-size:.78rem}
+.rv-bar-lbl{color:rgba(255,255,255,.5);width:20px;text-align:right;flex-shrink:0}
+.rv-bar-track{flex:1;height:7px;background:rgba(255,255,255,.1);border-radius:4px;overflow:hidden}
+.rv-bar-fill{height:100%;border-radius:4px;background:#fbbf24}
+.rv-bar-pct{color:rgba(255,255,255,.4);width:28px;text-align:right;flex-shrink:0}
+.rv-write-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;margin-top:18px;background:#4285F4;color:#fff;padding:12px 20px;border-radius:10px;font-size:.86rem;font-weight:600;text-decoration:none;transition:opacity .2s;border:none;cursor:pointer}
+.rv-write-btn:hover{opacity:.88}
+.rv-cards{display:flex;flex-direction:column;gap:16px}
+.rv-card2{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:22px}
+.rv-card2:hover{background:rgba(255,255,255,.08)}
+.rv-c-head{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.rv-c-av{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.05rem;color:#fff;flex-shrink:0}
+.rv-c-name{font-weight:600;font-size:.92rem;color:rgba(255,255,255,.9);line-height:1.2}
+.rv-c-date{font-size:.72rem;color:rgba(255,255,255,.35);margin-top:3px}
+.rv-c-stars{color:#fbbf24;font-size:.95rem;letter-spacing:2px;margin-bottom:8px}
+.rv-c-text{color:rgba(255,255,255,.65);font-size:.88rem;line-height:1.72;font-style:italic}
+/* ── GOOGLE MAP WITH PHOTO ── */
+.map-section{background:#f8fafc}
+.map-grid{display:grid;grid-template-columns:1fr;gap:20px;margin-top:32px}
+@media(min-width:768px){.map-grid{grid-template-columns:1fr 1fr}}
+.map-photo{border-radius:16px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.1)}
+.map-photo img{width:100%;height:100%;min-height:340px;object-fit:cover;display:block}
+.map-embed{border-radius:16px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.1)}
+.map-embed iframe{display:block;width:100%;height:100%;min-height:340px;border:0}
+.map-addr{margin-top:20px;display:flex;align-items:flex-start;gap:12px;padding:18px;background:#fff;border-radius:12px;border:1px solid #e2e8f0}
+.map-addr-icon{font-size:1.4rem;flex-shrink:0;margin-top:2px}
+.map-addr h4{font-weight:700;color:#0f172a;font-size:.92rem;margin-bottom:4px}
+.map-addr p{color:#64748b;font-size:.84rem;line-height:1.6}
+.map-dir{display:inline-flex;align-items:center;gap:6px;margin-top:8px;background:#1A1A2E;color:#fff;padding:9px 18px;border-radius:8px;font-size:.8rem;font-weight:600;text-decoration:none;transition:opacity .2s}
+.map-dir:hover{opacity:.85}
+/* ── QR CODES ── */
+.qr-section{background:#fff;border-top:1px solid #e2e8f0}
 .qr-grid{display:grid;grid-template-columns:1fr;gap:24px;margin-top:40px}
 @media(min-width:600px){.qr-grid{grid-template-columns:repeat(2,1fr)}}
-.qr-card{background:#fff;border-radius:16px;padding:36px 28px;text-align:center;border:1px solid #e2e8f0;box-shadow:0 4px 16px rgba(0,0,0,.06)}
-.qr-card h3{font-weight:700;color:#0f172a;font-size:1.05rem;margin-bottom:8px}
-.qr-card p{color:#64748b;font-size:.86rem;margin-bottom:20px;line-height:1.6}
-.qr-card img{width:180px;height:180px;border-radius:12px;border:3px solid #e2e8f0;margin:0 auto 14px;display:block;image-rendering:pixelated}
-.qr-sample{display:inline-block;background:#fef3c7;color:#92400e;font-size:.7rem;font-weight:700;padding:3px 10px;border-radius:4px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px}
-.qr-note{color:#94a3b8;font-size:.76rem;font-style:italic;margin-top:10px}
-.qr-action{display:inline-flex;align-items:center;gap:6px;background:#4285F4;color:#fff;padding:10px 22px;border-radius:8px;text-decoration:none;font-size:.84rem;font-weight:600;transition:opacity .2s;margin-top:6px}
-.qr-action:hover{opacity:.85}
+.qr-card{background:#f8fafc;border-radius:20px;padding:40px 28px;text-align:center;border:1px solid #e2e8f0}
+.qr-card-icon{font-size:2.2rem;margin-bottom:14px;display:block}
+.qr-card h3{font-weight:700;color:#0f172a;font-size:1.1rem;margin-bottom:8px}
+.qr-card p{color:#64748b;font-size:.88rem;line-height:1.65;margin-bottom:24px}
+.qr-img-wrap{position:relative;display:inline-block;margin-bottom:16px}
+.qr-img-wrap img{width:190px;height:190px;border-radius:14px;border:4px solid #e2e8f0;display:block;image-rendering:pixelated}
+.qr-badge{position:absolute;top:-10px;right:-10px;background:#f59e0b;color:#fff;font-size:.65rem;font-weight:800;padding:3px 9px;border-radius:20px;letter-spacing:.06em;text-transform:uppercase}
+.qr-note{color:#94a3b8;font-size:.76rem;font-style:italic;margin-top:8px}
+.qr-btn{display:inline-flex;align-items:center;gap:7px;background:#4285F4;color:#fff;padding:12px 26px;border-radius:10px;text-decoration:none;font-size:.87rem;font-weight:600;transition:opacity .2s;margin-top:4px}
+.qr-btn:hover{opacity:.88}
 </style>
 </head>
 <body>
@@ -203,28 +231,134 @@ footer{background:#020617;color:#334155;padding:28px 5vw;text-align:center;font-
 
 <section><div class="container"><div class="sec-center" data-r><p class="sec-eyebrow">Gallery</p><h2 class="sec-h2">A Look Inside</h2></div><div class="gallery-grid"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=Ab43m-ue8D3wZ-53V1ueargYkNfR_kvMWc5rB24tUeKJEzR4p1KavryrfkUQzH96Qw_Itee-UsIWEWAM6hp_FLtYqZJ1YrvXyTHZ3D6H5b2EiDGuEiQR2y6p8GEqlhF10rqTTXSO5wMgDIou4gbkmZKPT56oZgbybSyXfJEyn1GyDoGcrAKyNsoxIcjGIgQq5A8jhWbC3IyCw6GpYZeaG3ZAtcgDbz_z_6c4_XOfp7ScQ7ViXjwVhL0ePM1a-VM93ynHcsb-dvq3_SkDQR6y_jlicJZKEAn1YNbwSRV4hfJA6CIZscpN0C8FGV5nUv7TEvFYrFZlO_dbCEydksaxMjD1BwjjIPjTLbZMwMh4MPfy6OAWdJqUM9eTkSAiSMwYe2TbNrRXl3XvOfVOX1UHnJ65FhOpwy2emzpfrQGva_UUeJAcaOBLsbWkE0XN1r4nB1xc&key=AIzaSyC_ivUff6pQaag6HCBj5_PO3mk1G6kCKKs" alt="O2 Music Studio" loading="lazy" onerror="this.parentElement.remove()"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=Ab43m-vYRptezsw_KGmrGmSMcNJIIqnLJK4KzmaRW4iU8gyANjJH0kNQ9LFV6tMb6p3xvtFr6R_akCDsOo8fSQLtbZOo1fP11AsOq7Qqh3bbtoXkoESKgQk8OuvvFtaiNTZ694FYf4wPn5nNAoKxqlxGaNQZZsoltnH6g4KE08jVz6lN5TLF2TevY224k18uyUdgVkxvz-ppjqUbKgs4bDZNvGxC_EY4e878BWVwbGsXki_n-c2owfYmxFa3J45M1MUibU1zHLRU1AAFYi5QSLiUT4obnElztEdHGYARW9JC86N2EHHYkK5P1CdbceIx_SWv2Ye0vXmgRA7-yQZ1pYaw7PDEJ_G6Cji_z7jmRuyZOLj0BwzlRhPbpwyTXPJsCBVcFWj2Krlih5E673rSfa8WrALN9pUEKyR0Dr9hygWLxgUmwN44aRy9lhnYhzKxS8ug&key=AIzaSyC_ivUff6pQaag6HCBj5_PO3mk1G6kCKKs" alt="O2 Music Studio" loading="lazy" onerror="this.parentElement.remove()"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=Ab43m-u1Yju_SnANz_ht4Ulvj9CZW8fhLxsH4weEObVOZH4i5i0PDXt9UObHd12LQztp1LPH86iDXxDwdLvbeRtjf4AyBmEq3Pnb5b9oe-ylicZeNAs362ldgRmE6w02M9rSq16wlbLfN06m4gnawv9Y_gBzv8WPN81B-F8978kqDX4ZTyajW0o2nUwOtlqTcs-Md25RnLEaVEjfVzD4Fpe0hymNXrgLvg5m4c1LwCDCCyjg7JYjF3nt1-OiSzwJo9BSw8rAbODcckjhjZ4jgDugHKqpMrNeijSA5WgyR4hKsRSdHCMqEhLpI_GLzmUomlrVykQhEFviJvGOo_O5VIgZPA5myLQJ4vEOWJvvfB4rPbeZn7XhMVRbZuQJeVAYG8Z6HWKu-NcGSdyjvpe7hYDsxySb-sZiaxOZTL2AAS8RFrwDBw&key=AIzaSyC_ivUff6pQaag6HCBj5_PO3mk1G6kCKKs" alt="O2 Music Studio" loading="lazy" onerror="this.parentElement.remove()"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=Ab43m-uEdsOHJonGSGqA25O4wbyBehNeVxpjc_C90KR1ZoR7T4prb1p2rpg90S3hFWMfFDhZA4cLZOy3604OWaXPMI2xh2KoR1vV4FW5ipUUTQvhB7yt-VcmbJ4tWPepvcxsToh7q-YvuFF56CFJF_hzlzsa-5qTEjgBS3xvufgZy0OBJEThCBcLQtPaboF8BWWGt0qMebd6wA4zBIg9jVlvn9qWWoSGy25aCxws9k_AoKZ_r8EI-hDCfVRYZjVXPBXW3pL-1VsU9-rsUyO4W_ZewQv-IePND2kt1FmH5IfY-7h_O8iW0OCo9lzKN26Eesy9zdjI71UgVHYDzn4ksXgDJgH_7utCHIp2bU0lr2-Z03BuZH9jHi3UxpgfI5cfVL5mKAPQDpA7W0fFfJVQtSG0y4Pnp-okB4z0F--9vvPO39F8eVSR&key=AIzaSyC_ivUff6pQaag6HCBj5_PO3mk1G6kCKKs" alt="O2 Music Studio" loading="lazy" onerror="this.parentElement.remove()"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=Ab43m-tLE8HMa12Xv-ZZKZ5Ku9UH7rYNl73MVvgT_Wjm8YpGHvfSRMhvKlJlWbQIW3oKpYk9i3WfLX1mTOzr0fjOBuM8KjvU28hrYK_cd5CSCY45vTVLk15H7yAz3DkgvOy_6dUO_ZA7WUcFFzSx2ZUA67E57sn0laq0v3uaVNga_aRxq7LrchU_j0F53yKmMYm7zObFUuh9PNe9gzxQFtimMQXOaqI021KR9-iKEGnyVgYMrUxyI3h1owcfXXzWbcEGbWzVb-ayOOCO-9RdkzdNE1XeLuyyPH_KNYmLtCUx3Z4xYVkwYu5dBFm1WmXLMBVr4yTn37Y9VRu4zxOMW-QRU4Ru2goTo3gpsu-SnDuMefu_sDIp-5ff3dYSO7skE_ZW_KYk99yKaKdScQbOy6s1uRA24lDKP81piQgMrCV-6oZbAMEuA9GY6CYdWbJxyw&key=AIzaSyC_ivUff6pQaag6HCBj5_PO3mk1G6kCKKs" alt="O2 Music Studio" loading="lazy" onerror="this.parentElement.remove()"></div></div></section>
 
-<section class="rv-bg">
+<section class="rv-board">
+  <div class="container">
+    <div class="sec-center" data-r style="margin-bottom:40px">
+      <p class="sec-eyebrow" style="color:rgba(255,255,255,.45)">Google Reviews</p>
+      <h2 class="sec-h2" style="color:#fff">What Our Students Say</h2>
+    </div>
+    <div class="rv-board-inner">
+      <div class="rv-panel" data-r>
+        <div class="rv-glogo">
+          <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+          Google Reviews
+        </div>
+        <div class="rv-big-num">4.9</div>
+        <div class="rv-big-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="rv-total">Based on Google Reviews</div>
+        <div class="rv-bar-row">
+            <span class="rv-bar-lbl">5</span>
+            <div class="rv-bar-track"><div class="rv-bar-fill" style="width:80%"></div></div>
+            <span class="rv-bar-pct">80%</span>
+          </div><div class="rv-bar-row">
+            <span class="rv-bar-lbl">4</span>
+            <div class="rv-bar-track"><div class="rv-bar-fill" style="width:20%"></div></div>
+            <span class="rv-bar-pct">20%</span>
+          </div><div class="rv-bar-row">
+            <span class="rv-bar-lbl">3</span>
+            <div class="rv-bar-track"><div class="rv-bar-fill" style="width:0%"></div></div>
+            <span class="rv-bar-pct">0%</span>
+          </div><div class="rv-bar-row">
+            <span class="rv-bar-lbl">2</span>
+            <div class="rv-bar-track"><div class="rv-bar-fill" style="width:0%"></div></div>
+            <span class="rv-bar-pct">0%</span>
+          </div><div class="rv-bar-row">
+            <span class="rv-bar-lbl">1</span>
+            <div class="rv-bar-track"><div class="rv-bar-fill" style="width:0%"></div></div>
+            <span class="rv-bar-pct">0%</span>
+          </div>
+        <a href="https://maps.google.com/?cid=13554869940423212128" target="_blank" rel="noopener" class="rv-write-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Write a Review
+        </a>
+      </div>
+      <div class="rv-cards">
+        
+      <div class="rv-card2" data-r>
+        <div class="rv-c-head">
+          <div class="rv-c-av" style="background:#E94560">A</div>
+          <div>
+            <div class="rv-c-name">Aravindhan</div>
+            <div class="rv-c-date">Google Review</div>
+          </div>
+        </div>
+        <div class="rv-c-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="rv-c-text">&ldquo;Very good place for learning Musical Instruments and Vocals. I would strongly recommend O2 Music Studio to anyone who wants to learn Music. We will be taught from basics and our basics will be very strong.&rdquo;</p>
+      </div>
+      <div class="rv-card2" data-r>
+        <div class="rv-c-head">
+          <div class="rv-c-av" style="background:#1A73E8">R</div>
+          <div>
+            <div class="rv-c-name">Raja K Advocate</div>
+            <div class="rv-c-date">Google Review</div>
+          </div>
+        </div>
+        <div class="rv-c-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+        <p class="rv-c-text">&ldquo;Genuine teachers — the right place for those who seriously want to learn music.&rdquo;</p>
+      </div>
+      <div class="rv-card2" data-r>
+        <div class="rv-c-head">
+          <div class="rv-c-av" style="background:#34A853">S</div>
+          <div>
+            <div class="rv-c-name">Sridhar R</div>
+            <div class="rv-c-date">Google Review</div>
+          </div>
+        </div>
+        <div class="rv-c-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="rv-c-text">&ldquo;Good and excellent teaching at nominal rate.&rdquo;</p>
+      </div>
+      <div class="rv-card2" data-r>
+        <div class="rv-c-head">
+          <div class="rv-c-av" style="background:#FBBC05">S</div>
+          <div>
+            <div class="rv-c-name">Sathish Sathi K</div>
+            <div class="rv-c-date">Google Review</div>
+          </div>
+        </div>
+        <div class="rv-c-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="rv-c-text">&ldquo;One of the best places to learn music, especially violin and flute.&rdquo;</p>
+      </div>
+      <div class="rv-card2" data-r>
+        <div class="rv-c-head">
+          <div class="rv-c-av" style="background:#9c27b0">P</div>
+          <div>
+            <div class="rv-c-name">Pooja Pooja</div>
+            <div class="rv-c-date">Google Review</div>
+          </div>
+        </div>
+        <div class="rv-c-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="rv-c-text">&ldquo;Very good teaching.&rdquo;</p>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="map-section">
   <div class="container">
     <div class="sec-center" data-r>
-      <p class="sec-eyebrow" style="color:rgba(255,255,255,.45)">Google Reviews</p>
-      <h2 class="sec-h2" style="color:#fff">What Clients Say</h2>
-      <p class="sec-sub" style="color:rgba(255,255,255,.42)">Real feedback from our students &amp; parents</p>
+      <p class="sec-eyebrow">Find Us</p>
+      <h2 class="sec-h2">Our Location</h2>
+      <p class="sec-sub">Conveniently located on Rajiv Gandhi Salai, Kelambakkam</p>
     </div>
-    <div class="rv-summary-box" data-r>
-      <div class="rv-score-big">4.9</div>
-      <div class="rv-stars-lg">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <div class="rv-g-badge">
-        <svg width="16" height="16" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
-        Powered by Google
+    <div class="map-grid" data-r>
+      <div class="map-photo">
+        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=Ab43m-ue8D3wZ-53V1ueargYkNfR_kvMWc5rB24tUeKJEzR4p1KavryrfkUQzH96Qw_Itee-UsIWEWAM6hp_FLtYqZJ1YrvXyTHZ3D6H5b2EiDGuEiQR2y6p8GEqlhF10rqTTXSO5wMgDIou4gbkmZKPT56oZgbybSyXfJEyn1GyDoGcrAKyNsoxIcjGIgQq5A8jhWbC3IyCw6GpYZeaG3ZAtcgDbz_z_6c4_XOfp7ScQ7ViXjwVhL0ePM1a-VM93ynHcsb-dvq3_SkDQR6y_jlicJZKEAn1YNbwSRV4hfJA6CIZscpN0C8FGV5nUv7TEvFYrFZlO_dbCEydksaxMjD1BwjjIPjTLbZMwMh4MPfy6OAWdJqUM9eTkSAiSMwYe2TbNrRXl3XvOfVOX1UHnJ65FhOpwy2emzpfrQGva_UUeJAcaOBLsbWkE0XN1r4nB1xc&key=AIzaSyC_ivUff6pQaag6HCBj5_PO3mk1G6kCKKs" alt="O2 Music Studio Kelambakkam" loading="lazy">
       </div>
-      <a href="https://maps.google.com/?cid=13554869940423212128" target="_blank" rel="noopener" class="rv-write-btn">&#11088; Write a Review</a>
+      <div class="map-embed">
+        <iframe src="https://maps.google.com/maps?cid=13554869940423212128&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
     </div>
-    <div class="rv-grid">
-      <div class="rv-card" data-r><div class="rv-card-head"><div class="rv-card-av" style="background:#E94560">A</div><div><div class="rv-card-name">Aravindhan</div><div class="rv-card-sub">Google Review</div></div></div><div class="rv-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="rv-text">&ldquo;Very good place for learning Musical Instruments and Vocals. I would strongly recommend O2 Music Studio to anyone who wants to learn Music. We will be taught from basics and our basics will be very strong.&rdquo;</p></div>
-      <div class="rv-card" data-r><div class="rv-card-head"><div class="rv-card-av" style="background:#1A73E8">R</div><div><div class="rv-card-name">Raja K Advocate</div><div class="rv-card-sub">Google Review</div></div></div><div class="rv-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div><p class="rv-text">&ldquo;Genuine teachers &mdash; the right place for those who seriously want to learn music.&rdquo;</p></div>
-      <div class="rv-card" data-r><div class="rv-card-head"><div class="rv-card-av" style="background:#34A853">S</div><div><div class="rv-card-name">Sridhar R</div><div class="rv-card-sub">Google Review</div></div></div><div class="rv-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="rv-text">&ldquo;Good and excellent teaching at nominal rate.&rdquo;</p></div>
-      <div class="rv-card" data-r><div class="rv-card-head"><div class="rv-card-av" style="background:#FBBC05">S</div><div><div class="rv-card-name">Sathish Sathi K</div><div class="rv-card-sub">Google Review</div></div></div><div class="rv-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="rv-text">&ldquo;One of the best places to learn music, especially violin and flute.&rdquo;</p></div>
-      <div class="rv-card" data-r><div class="rv-card-head"><div class="rv-card-av" style="background:#9c27b0">P</div><div><div class="rv-card-name">Pooja Pooja</div><div class="rv-card-sub">Google Review</div></div></div><div class="rv-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="rv-text">&ldquo;Very good teaching.&rdquo;</p></div>
+    <div class="map-addr" data-r>
+      <div class="map-addr-icon">&#128205;</div>
+      <div>
+        <h4>O2 Music Studio</h4>
+        <p>No:1401/94, Rajiv Gandhi Salai, above Hero showroom, Ramalingapuram, Kelambakkam, Tamil Nadu 603103</p>
+        <a href="https://maps.google.com/?cid=13554869940423212128" target="_blank" rel="noopener" class="map-dir">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21 3L3 10.53v.98l6.84 2.65L12.48 21h.98L21 3z"/></svg>
+          Get Directions
+        </a>
+      </div>
     </div>
   </div>
 </section>
@@ -235,9 +369,6 @@ footer{background:#020617;color:#334155;padding:28px 5vw;text-align:center;font-
       <p class="sec-eyebrow">Contact</p>
       <h2 class="sec-h2">Get In Touch</h2>
       <p class="sec-sub">We'd love to hear from you</p>
-    </div>
-    <div class="map-wrap" data-r>
-      <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyC_ivUff6pQaag6HCBj5_PO3mk1G6kCKKs&q=O2+Music+Studio,+Kelambakkam,+Tamil+Nadu+603103" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <div class="contact-grid">
       <div class="contact-items" data-r>
@@ -259,27 +390,37 @@ footer{background:#020617;color:#334155;padding:28px 5vw;text-align:center;font-
 <section class="qr-section">
   <div class="container">
     <div class="sec-center" data-r>
-      <p class="sec-eyebrow">Quick Access</p>
+      <p class="sec-eyebrow">Quick Actions</p>
       <h2 class="sec-h2">Scan &amp; Connect</h2>
-      <p class="sec-sub">Pay instantly or leave us a Google review with a quick scan</p>
+      <p class="sec-sub">Use your phone camera to pay or leave us a review instantly</p>
     </div>
     <div class="qr-grid">
       <div class="qr-card" data-r>
-        <h3>&#128179; Payment QR Code</h3>
-        <p>Scan to pay quickly and securely via UPI</p>
-        <span class="qr-sample">Sample &mdash; Client to provide</span><br>
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=SAMPLE+PAYMENT+QR&bgcolor=ffffff&color=1A1A2E&qzone=2" alt="Payment QR Code (Sample)">
-        <p class="qr-note">&#9432; Actual payment QR code will be replaced once provided</p>
+        <span class="qr-card-icon">&#128179;</span>
+        <h3>Payment QR Code</h3>
+        <p>Scan to pay instantly via UPI — no need to type account details</p>
+        <div class="qr-img-wrap">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=190x190&data=SAMPLE+PAYMENT+QR&bgcolor=ffffff&color=1A1A2E&qzone=2&format=png" alt="Payment QR (Sample)">
+          <span class="qr-badge">Sample</span>
+        </div>
+        <p class="qr-note">&#9432; Client to provide the actual UPI / payment QR image</p>
       </div>
       <div class="qr-card" data-r data-d="2">
-        <h3>&#11088; Review on Google</h3>
-        <p>Happy with us? Scan to leave a Google review in seconds</p>
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https%3A%2F%2Fmaps.google.com%2F%3Fcid%3D13554869940423212128&bgcolor=ffffff&color=4285F4&qzone=2" alt="Google Review QR Code">
-        <a href="https://maps.google.com/?cid=13554869940423212128" target="_blank" rel="noopener" class="qr-action">&#11088; Write a Review</a>
+        <span class="qr-card-icon">&#11088;</span>
+        <h3>Leave a Google Review</h3>
+        <p>Loved learning with us? Scan to open our Google listing and leave a review in seconds</p>
+        <div class="qr-img-wrap">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=190x190&data=https%3A%2F%2Fmaps.google.com%2F%3Fcid%3D13554869940423212128&bgcolor=ffffff&color=4285F4&qzone=2&format=png" alt="Google Review QR Code">
+        </div>
+        <a href="https://maps.google.com/?cid=13554869940423212128" target="_blank" rel="noopener" class="qr-btn">
+          <svg width="15" height="15" viewBox="0 0 24 24"><path fill="#fff" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#fff" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#fff" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#fff" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+          Write a Review on Google
+        </a>
       </div>
     </div>
   </div>
 </section>
+
 <footer>
   <div class="footer-brand">O2 Music Studio</div>
   <div>© 2026 · No:1401/94, Rajiv Gandhi Salai, above Hero showroom, Ramalingapuram, Kelambakkam, Tamil Nadu 603103, India</div>
