@@ -107,6 +107,33 @@ section{padding:72px 5vw}
 /* FOOTER */
 footer{background:#020617;color:#334155;padding:28px 5vw;text-align:center;font-size:.8rem}
 .footer-brand{color:#64748b;font-weight:700;font-size:.88rem;margin-bottom:6px}
+
+/* GOOGLE REVIEWS BOARD */
+.rv-summary-box{display:flex;flex-direction:column;align-items:center;gap:8px;padding:32px;background:rgba(255,255,255,.07);border-radius:20px;margin:0 auto 44px;border:1px solid rgba(255,255,255,.12);max-width:300px}
+.rv-score-big{font-size:4.5rem;font-weight:800;color:#fff;line-height:1;letter-spacing:-.04em}
+.rv-stars-lg{color:#fbbf24;font-size:1.8rem;letter-spacing:3px;margin:4px 0}
+.rv-g-badge{display:flex;align-items:center;gap:6px;color:rgba(255,255,255,.42);font-size:.76rem}
+.rv-write-btn{display:inline-block;background:#4285F4;color:#fff;padding:11px 26px;border-radius:8px;font-size:.86rem;font-weight:600;text-decoration:none;margin-top:8px;transition:opacity .2s}
+.rv-write-btn:hover{opacity:.85}
+.rv-card-head{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.rv-card-av{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1rem;color:#fff;flex-shrink:0}
+.rv-card-name{font-weight:600;font-size:.9rem;color:rgba(255,255,255,.9)}
+.rv-card-sub{font-size:.74rem;color:rgba(255,255,255,.33);margin-top:1px}
+/* GOOGLE MAP */
+.map-wrap{margin-bottom:32px;border-radius:16px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.1)}
+.map-wrap iframe{display:block;width:100%;height:360px;border:0}
+/* QR SECTION */
+.qr-section{background:#f8fafc;padding:72px 5vw}
+.qr-grid{display:grid;grid-template-columns:1fr;gap:24px;margin-top:40px}
+@media(min-width:600px){.qr-grid{grid-template-columns:repeat(2,1fr)}}
+.qr-card{background:#fff;border-radius:16px;padding:36px 28px;text-align:center;border:1px solid #e2e8f0;box-shadow:0 4px 16px rgba(0,0,0,.06)}
+.qr-card h3{font-weight:700;color:#0f172a;font-size:1.05rem;margin-bottom:8px}
+.qr-card p{color:#64748b;font-size:.86rem;margin-bottom:20px;line-height:1.6}
+.qr-card img{width:180px;height:180px;border-radius:12px;border:3px solid #e2e8f0;margin:0 auto 14px;display:block;image-rendering:pixelated}
+.qr-sample{display:inline-block;background:#fef3c7;color:#92400e;font-size:.7rem;font-weight:700;padding:3px 10px;border-radius:4px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px}
+.qr-note{color:#94a3b8;font-size:.76rem;font-style:italic;margin-top:10px}
+.qr-action{display:inline-flex;align-items:center;gap:6px;background:#4285F4;color:#fff;padding:10px 22px;border-radius:8px;text-decoration:none;font-size:.84rem;font-weight:600;transition:opacity .2s;margin-top:6px}
+.qr-action:hover{opacity:.85}
 </style>
 </head>
 <body>
@@ -179,12 +206,25 @@ footer{background:#020617;color:#334155;padding:28px 5vw;text-align:center;font-
 <section class="rv-bg">
   <div class="container">
     <div class="sec-center" data-r>
-      <p class="sec-eyebrow" style="color:rgba(255,255,255,.45)">Testimonials</p>
+      <p class="sec-eyebrow" style="color:rgba(255,255,255,.45)">Google Reviews</p>
       <h2 class="sec-h2" style="color:#fff">What Clients Say</h2>
-      <p class="sec-sub" style="color:rgba(255,255,255,.42)">Real feedback from real people</p>
+      <p class="sec-sub" style="color:rgba(255,255,255,.42)">Real feedback from our students &amp; parents</p>
+    </div>
+    <div class="rv-summary-box" data-r>
+      <div class="rv-score-big">4.9</div>
+      <div class="rv-stars-lg">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <div class="rv-g-badge">
+        <svg width="16" height="16" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+        Powered by Google
+      </div>
+      <a href="https://maps.google.com/?cid=13554869940423212128" target="_blank" rel="noopener" class="rv-write-btn">&#11088; Write a Review</a>
     </div>
     <div class="rv-grid">
-      <div class="rv-card" data-r data-d="NaN"><div class="rv-stars">★★★★★</div><p class="rv-text">"Very good place for learning Musical Instruments and Vocals. I would strongly recommend O2 Music Studio to anyone who wants to learn Music. We will be taught from basics and our basics will be very strong."</p><div class="rv-author">— Aravindhan</div></div><div class="rv-card" data-r data-d="NaN"><div class="rv-stars">★★★★☆</div><p class="rv-text">"Genuine teachers — the right place for those who seriously want to learn music."</p><div class="rv-author">— Raja K Advocate</div></div><div class="rv-card" data-r data-d="NaN"><div class="rv-stars">★★★★★</div><p class="rv-text">"Good and excellent teaching at nominal rate."</p><div class="rv-author">— Sridhar R</div></div><div class="rv-card" data-r data-d="NaN"><div class="rv-stars">★★★★★</div><p class="rv-text">"One of the best places to learn music, especially violin and flute."</p><div class="rv-author">— Sathish Sathi K</div></div><div class="rv-card" data-r data-d="NaN"><div class="rv-stars">★★★★★</div><p class="rv-text">"Very good teaching."</p><div class="rv-author">— Pooja Pooja</div></div>
+      <div class="rv-card" data-r><div class="rv-card-head"><div class="rv-card-av" style="background:#E94560">A</div><div><div class="rv-card-name">Aravindhan</div><div class="rv-card-sub">Google Review</div></div></div><div class="rv-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="rv-text">&ldquo;Very good place for learning Musical Instruments and Vocals. I would strongly recommend O2 Music Studio to anyone who wants to learn Music. We will be taught from basics and our basics will be very strong.&rdquo;</p></div>
+      <div class="rv-card" data-r><div class="rv-card-head"><div class="rv-card-av" style="background:#1A73E8">R</div><div><div class="rv-card-name">Raja K Advocate</div><div class="rv-card-sub">Google Review</div></div></div><div class="rv-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div><p class="rv-text">&ldquo;Genuine teachers &mdash; the right place for those who seriously want to learn music.&rdquo;</p></div>
+      <div class="rv-card" data-r><div class="rv-card-head"><div class="rv-card-av" style="background:#34A853">S</div><div><div class="rv-card-name">Sridhar R</div><div class="rv-card-sub">Google Review</div></div></div><div class="rv-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="rv-text">&ldquo;Good and excellent teaching at nominal rate.&rdquo;</p></div>
+      <div class="rv-card" data-r><div class="rv-card-head"><div class="rv-card-av" style="background:#FBBC05">S</div><div><div class="rv-card-name">Sathish Sathi K</div><div class="rv-card-sub">Google Review</div></div></div><div class="rv-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="rv-text">&ldquo;One of the best places to learn music, especially violin and flute.&rdquo;</p></div>
+      <div class="rv-card" data-r><div class="rv-card-head"><div class="rv-card-av" style="background:#9c27b0">P</div><div><div class="rv-card-name">Pooja Pooja</div><div class="rv-card-sub">Google Review</div></div></div><div class="rv-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="rv-text">&ldquo;Very good teaching.&rdquo;</p></div>
     </div>
   </div>
 </section>
@@ -195,6 +235,9 @@ footer{background:#020617;color:#334155;padding:28px 5vw;text-align:center;font-
       <p class="sec-eyebrow">Contact</p>
       <h2 class="sec-h2">Get In Touch</h2>
       <p class="sec-sub">We'd love to hear from you</p>
+    </div>
+    <div class="map-wrap" data-r>
+      <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyC_ivUff6pQaag6HCBj5_PO3mk1G6kCKKs&q=O2+Music+Studio,+Kelambakkam,+Tamil+Nadu+603103" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <div class="contact-grid">
       <div class="contact-items" data-r>
@@ -213,6 +256,30 @@ footer{background:#020617;color:#334155;padding:28px 5vw;text-align:center;font-
   </div>
 </section>
 
+<section class="qr-section">
+  <div class="container">
+    <div class="sec-center" data-r>
+      <p class="sec-eyebrow">Quick Access</p>
+      <h2 class="sec-h2">Scan &amp; Connect</h2>
+      <p class="sec-sub">Pay instantly or leave us a Google review with a quick scan</p>
+    </div>
+    <div class="qr-grid">
+      <div class="qr-card" data-r>
+        <h3>&#128179; Payment QR Code</h3>
+        <p>Scan to pay quickly and securely via UPI</p>
+        <span class="qr-sample">Sample &mdash; Client to provide</span><br>
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=SAMPLE+PAYMENT+QR&bgcolor=ffffff&color=1A1A2E&qzone=2" alt="Payment QR Code (Sample)">
+        <p class="qr-note">&#9432; Actual payment QR code will be replaced once provided</p>
+      </div>
+      <div class="qr-card" data-r data-d="2">
+        <h3>&#11088; Review on Google</h3>
+        <p>Happy with us? Scan to leave a Google review in seconds</p>
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https%3A%2F%2Fmaps.google.com%2F%3Fcid%3D13554869940423212128&bgcolor=ffffff&color=4285F4&qzone=2" alt="Google Review QR Code">
+        <a href="https://maps.google.com/?cid=13554869940423212128" target="_blank" rel="noopener" class="qr-action">&#11088; Write a Review</a>
+      </div>
+    </div>
+  </div>
+</section>
 <footer>
   <div class="footer-brand">O2 Music Studio</div>
   <div>© 2026 · No:1401/94, Rajiv Gandhi Salai, above Hero showroom, Ramalingapuram, Kelambakkam, Tamil Nadu 603103, India</div>
