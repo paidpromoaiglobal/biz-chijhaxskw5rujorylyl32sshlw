@@ -1,6 +1,6 @@
 const PLACE_ID = 'ChIJHaXSKW5RUjoRYLyL32SSHLw';
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   const key = process.env.GOOGLE_PLACES_API_KEY;
   if (!key) return res.status(500).json({ error: 'API key not configured' });
 
@@ -19,7 +19,6 @@ export default async function handler(req, res) {
 
   const r = data.result;
 
-  // Cache 1 hour on CDN edge, serve stale up to 24 h while revalidating
   res.setHeader('Cache-Control', 's-maxage=3600, stale-while-revalidate=86400');
   res.status(200).json({
     rating: r.rating,
@@ -31,4 +30,4 @@ export default async function handler(req, res) {
       time: rv.relative_time_description,
     })),
   });
-}
+};
